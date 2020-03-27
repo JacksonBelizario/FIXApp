@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "FixApp": {
+      "commandName": "Project",
+      "commandLineArgs": "executor.cfg"
+    }
+  }
+}

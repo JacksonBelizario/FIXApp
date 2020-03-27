@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFrameworks>netcoreapp3.0</TargetFrameworks>
+		<RootNamespace>FixApp</RootNamespace>
+		<AssemblyName>FixApp</AssemblyName>
+		<Copyright>Copyright © Intelitrader, 2020</Copyright>
+		<Company>Intelitrader</Company>
+		<Platforms>AnyCPU;x64</Platforms>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.2.7" />
+	  <PackageReference Include="QuickFix.CustomMessages" Version="1.0.5" />
+	  <PackageReference Include="QuickFix.Net.NETCore" Version="1.8.1" />
+	  <PackageReference Include="QuickFix.Net.NETCore.FIX40" Version="1.8.1" />
+	  <PackageReference Include="QuickFix.Net.NETCore.FIX41" Version="1.8.1" />
+	  <PackageReference Include="QuickFix.Net.NETCore.FIX42" Version="1.8.1" />
+	  <PackageReference Include="QuickFix.Net.NETCore.FIX43" Version="1.8.1" />
+	  <PackageReference Include="QuickFix.Net.NETCore.FIX44" Version="1.8.1" />
+	  <PackageReference Include="QuickFix.Net.NETCore.FIX50" Version="1.8.1" />
+	  <PackageReference Include="QuickFix.Net.NETCore.FIX50SP1" Version="1.8.1" />
+	  <PackageReference Include="QuickFix.Net.NETCore.FIX50SP2" Version="1.8.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Include="System.Web" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="executor.cfg">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="executor_ssl.cfg">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+</Project>
