@@ -8,7 +8,7 @@
 - Mensagens que o aceptor trata: NewOrderSingle, OrderCancelRequest, OrderCancelReplaceRequest
 - O Acceptor recebe as mensagens acima, e responde a todos os clientes da sessão com outra mensagem
 
-## Configuração do executor
+## Configuração do aceptor
 
 - Porta: 5001
 - SenderCompID: EXECUTOR
@@ -16,7 +16,7 @@
   * TargetCompID: CLIENT1, CLIENT2, CLIENT3
 - Protocolo: 4.4
 
-## Inciando o docker
+## Iniciando o docker
 
 - docker-compose build
 - docker-compose up -d
