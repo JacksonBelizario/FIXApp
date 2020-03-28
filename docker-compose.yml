@@ -1,0 +1,17 @@
+version: '3.4'
+
+networks:
+  fixapp-dev:
+    driver: bridge 
+
+services:
+  fixapp:
+    image: fixapp:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5001:5001"
+      - "5080:5080"
+    networks:
+      - fixapp-dev 

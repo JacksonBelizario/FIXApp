@@ -4,7 +4,7 @@ using System.IO;
 using System.Net;
 using System.Text;
 using System.Threading;
-using System.Web;
+using Microsoft.AspNetCore.WebUtilities;
 
 namespace Acceptor
 {
@@ -36,6 +36,7 @@ namespace Acceptor
             if (!_httpListener.IsListening)
             {
                 _httpListener.Start();
+                Console.WriteLine("HttpServer Listening...");
                 _running = true;
                 // Use a thread to listen to the Http requests
                 _connectionThread = new Thread(ConnectionThreadStart);
@@ -502,7 +503,7 @@ namespace Acceptor
             var uri = new Uri(url);
 
             // this gets all the query string key value pairs as a collection
-            var newQueryString = HttpUtility.ParseQueryString(uri.Query);
+            var newQueryString = QueryHelpers.ParseQuery(uri.Query);
 
             // this removes the key if exists
             newQueryString.Remove(key);
@@ -517,7 +518,7 @@ namespace Acceptor
 
         public static string GetParameterList(string url)
         {
-            return HttpUtility.ParseQueryString((new Uri(url).Query)).ToString();
+            return QueryHelpers.ParseQuery((new Uri(url).Query)).ToString();
         }
 
         private static string AddRow(string colName, bool value, string url = "")

@@ -6,13 +6,13 @@ namespace FixApp
 {
     class Program
     {
-        private const string HttpServerPrefix = "http://127.0.0.1:5080/";
+        private const string HttpServerPrefix = "http://*:5080/";
 
         [STAThread]
         static void Main(string[] args)
         {
             Console.WriteLine("=============");
-            Console.WriteLine("This is only an example program, meant to be used with the TradeClient example.");
+            Console.WriteLine("Executor, use with the TradeClient.");
             Console.WriteLine("=============");
 
             if (args.Length != 1)
@@ -34,11 +34,10 @@ namespace FixApp
                 srv.Start();
 
                 Console.WriteLine("View Executor status: " + HttpServerPrefix);
-                Console.WriteLine("press <enter> to quit");
-                Console.Read();
+                //Console.Read();
 
-                srv.Stop();
-                acceptor.Stop();
+                //srv.Stop();
+                //acceptor.Stop();
             }
             catch (Exception e)
             {
