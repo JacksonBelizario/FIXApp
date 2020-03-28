@@ -23,6 +23,7 @@ namespace FixApp
         {
             Console.WriteLine("IN:  " + message);
             Crack(message, sessionID);
+            // SendMessage(message);
         }
 
         public void ToApp(Message message, SessionID sessionID)
