@@ -1,19 +1,19 @@
-# AplicaÁ„o FIX
+# Aplica√ß√£o FIX
 
-- Pequena aplicaÁ„o desenvolvida para estudos do protocolo FIX
+- Pequena aplica√ß√£o desenvolvida para estudos do protocolo FIX
 
-## DescriÁ„o
+## Descri√ß√£o
 
-- Acceptor que recebe como argumento a configuraÁ„o
+- Acceptor que recebe como argumento a configura√ß√£o
 - Mensagens que o aceptor trata: NewOrderSingle, OrderCancelRequest, OrderCancelReplaceRequest
-- O Acceptor recebe as mensagens acima, e responde a todos os clientes da sess„o com outra mensagem
+- O Acceptor recebe as mensagens acima, e responde a todos os clientes da sess√£o com outra mensagem
 
-## ConfiguraÁ„o do executor
+## Configura√ß√£o do executor
 
 - Porta: 5001
 - SenderCompID: EXECUTOR
 - Clientes:
-  -TargetCompID: CLIENT1, CLIENT2, CLIENT3
+  * TargetCompID: CLIENT1, CLIENT2, CLIENT3
 - Protocolo: 4.4
 
 ## Inciando o docker
